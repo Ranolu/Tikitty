@@ -1,0 +1,39 @@
+body, h1, h2, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background-color: #013c58;
+}
+
+.about_outer_container{
+min-height: 10vh;
+background-color: #013c58;
+padding: 20px;
+text-align: center;
+}
+
+.about_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff; /* Light gray */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.about_us, .why-choose-us {
+background-color: #fff;
+margin-top: 0px;
+padding: 40px;
+}
+
+h2 {
+color: #333;
+}
+
+p {
+line-height: 1.6;
+}

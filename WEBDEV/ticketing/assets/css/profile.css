@@ -1,0 +1,70 @@
+.sectionContainer {
+    background-color: #013c58;
+    min-height: 60svh;
+}
+
+@media (max-width: 390px) {
+    .fs-5 {
+        font-size: 10px;
+    }
+
+    .fa {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 390px) {
+    main>div {
+        width: 75%;
+    }
+
+    .fs-5 {
+        font-size: 16px;
+    }
+
+    .fa {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    main>div {
+        width: 50%;
+    }
+
+    .fs-5 {
+        font-size: 18px;
+    }
+
+    .fa {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 992px) {
+    main>div {
+        width: 50%;
+    }
+
+    .fs-5 {
+        font-size: 20px;
+    }
+
+    .fa {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main>div {
+        width: 50%;
+    }
+
+    .fs-5 {
+        font-size: 22px;
+    }
+
+    .fa {
+        font-size: 36px;
+    }
+}
