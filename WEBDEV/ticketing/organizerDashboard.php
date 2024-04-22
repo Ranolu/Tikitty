@@ -27,7 +27,7 @@
                             <div class="row mt-3 px-3">
                             <?php
                                 $dataActiveFiltered = array_filter($data, function($item) {
-                                    return $item['approval'] == 'approved' && $item['status'] != 'ended' && $item['status'] != 'sold_out';
+                                    return $item['approval'] == 'approved' && $item['status'] != 'ended' && ($item['status'] == 'selling' || $item['status'] == 'upcoming');
                                 });
                                 // Paginate the data array
                                 $perPage = 5;
@@ -49,7 +49,7 @@
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title"><a href="eventView.php?event_id=<?php echo $item['event_id']; ?>"><?php echo $item['title']; ?></a></h5>
-                                                        <p class="card-text"><?php echo $item['description'] ?></p>
+                                                        <p class="card-text"><?php echo $item['status'] ?></p>
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">Sell Start: <?php echo $item['sell_from_date'] ?></li>
                                                             <li class="list-group-item">Sell Until: <?php echo $item['sell_until_date'] ?></li>
@@ -88,7 +88,7 @@
                         <div class="row mt-3 px-3">
                         <?php
                             $dataArchiveFiltered = array_filter($data, function($item) {
-                                return $item['status'] == 'ended' || $item['status'] == 'sold_out';
+                                return $item['status'] == 'ended';
                             });
                             $perPageArchive = 5;
                             $totalItemsArchive = count($dataArchiveFiltered);
@@ -98,7 +98,7 @@
                             $itemsToShowArchive = array_slice($dataArchiveFiltered, $startArchive, $perPageArchive);
 
                             foreach ($itemsToShowArchive as $item) {
-                                if ($item['status'] == 'ended' || $item['status'] == 'sold_out') {
+                                if ($item['status'] == 'ended') {
                             ?>
                                 <div class="card mb-3 col-12 px-0" style="max-width: 100%;">
                                     <div class="row g-0 overflow-auto">
@@ -108,7 +108,7 @@
                                         <div class="col-md-8">
                                             <div class="card-body">
                                                 <h5 class="card-title"><a href="eventView.php?event_id=<?php echo $item['event_id']; ?>"><?php echo $item['title']; ?></a></h5>
-                                                <p class="card-text"><?php echo $item['description'] ?></p>
+                                                <p class="card-text"><?php echo $item['status'] ?></p>
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item">Sell Start: <?php echo $item['sell_from_date'] ?></li>
                                                     <li class="list-group-item">Sell Until: <?php echo $item['sell_from_date'] ?></li>

@@ -1,6 +1,7 @@
 <?php require('layout/layout_top.php') ?>
-
-<div class="container-lg my-5 pt-5 px-md-5">
+<link rel="stylesheet" href="assets/css/forms.css">
+<section class="eventsContainer pb-5">
+    <div class="container-lg my-5 pt-5 px-md-5">
         <div class="card pb-5">
             <div class="card-header">
                 <h1>Add Event</h1>
@@ -75,6 +76,8 @@
             </form>
         </div>
     </div>
+</section>
+    
 
 <script src="js/addEvent.js"></script>    
 <?php require('layout/layout_bot.php') ?>

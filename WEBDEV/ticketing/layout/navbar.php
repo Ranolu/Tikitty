@@ -9,6 +9,7 @@
                     </div>
                 </div>
                 <?php if($route === '/WEBDEV/ticketing/' || strpos($routeWithoutParams, '/WEBDEV/ticketing/index.php') === 0 || strpos($routeWithoutParams, '/WEBDEV/ticketing/eventView.php') === 0 || strpos($routeWithoutParams, '/WEBDEV/ticketing/eventList.php') === 0) {?>
+                <?php if (!isset($_SESSION['role']) || $_SESSION['role'] == '3') {?>
                 <div class="col-6 col-md-4 col-lg-8 text-center  overflow-hidden">
                     <div class="searchbar">
                         <form action="./eventList.php" method="get">
@@ -19,7 +20,10 @@
                         </form>
                     </div>
                 </div>
-                <?php } else {?>
+                <?php } else { ?> 
+                    <div class="col-6 col-md-4 col-lg-8 text-center  overflow-hidden">
+                    </div>
+                    <?php }} else {?>
                     <div class="col-6 col-md-4 col-lg-8 text-center  overflow-hidden">
                     </div>
                 <?php }?>

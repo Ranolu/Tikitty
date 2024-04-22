@@ -32,7 +32,7 @@
                 <div class="card-img-top aspect-ratio-1x1" style="height: 300px">
                         <img class="card-img-top aspect-ratio-1x1" style="height: 100%; width: 100%; object-fit: cover; object-position: center; " src="<?php echo $event['thumbnail_path']?>" alt="img here">
                     </div>
-                    <div class="card-body text-center py-4">
+                    <div class="card-body text-center py-4" style="height: 250px;">
                         <h4 class="card-title">
                             <?php echo $event['title']?>
                         </h4>
@@ -41,7 +41,9 @@
                             <li class="list-group-item">End Date: <?php echo $event['end_date']?></li>
                             <li class="list-group-item">Venue: <?php echo $event['venue']?></li>
                         </ul>                        
-                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary mt-3">More Info</a>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +62,7 @@
                     <div class="card-img-top aspect-ratio-1x1" style="height: 300px">
                         <img class="card-img-top aspect-ratio-1x1" style="height: 100%; width: 100%; object-fit: cover; object-position: center; " src="<?php echo $event['thumbnail_path']?>" alt="img here">
                     </div>
-                    <div class="card-body text-center py-4">
+                    <div class="card-body text-center py-4" style="height: 250px;">
                         <h4 class="card-title">
                             <?php echo $event['title']?>
                         </h4>
@@ -69,7 +71,9 @@
                             <li class="list-group-item">End Date: <?php echo $event['end_date']?></li>
                             <li class="list-group-item">Venue: <?php echo $event['venue']?></li>
                         </ul>                        
-                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary mt-3">More Info</a>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +92,7 @@
                     <div class="card-img-top aspect-ratio-1x1" style="height: 300px">
                         <img class="card-img-top aspect-ratio-1x1" style="height: 100%; width: 100%; object-fit: cover; object-position: center; " src="<?php echo $event['thumbnail_path']?>" alt="img here">
                     </div>
-                    <div class="card-body text-center py-4">
+                    <div class="card-body text-center py-4" style="height: 250px;">
                         <h4 class="card-title">
                             <?php echo $event['title']?>
                         </h4>
@@ -97,7 +101,10 @@
                             <li class="list-group-item">End Date: <?php echo $event['end_date']?></li>
                             <li class="list-group-item">Venue: <?php echo $event['venue']?></li>
                         </ul>                        
-                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary mt-3">More Info</a>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="eventView.php?event_id=<?php echo $event['event_id'] ?>" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             </div>

@@ -42,5 +42,5 @@
         </div>
     </div>
 </div>
-
+<script src="js/contact.js"></script>
 <?php require('layout/layout_bot.php')?>

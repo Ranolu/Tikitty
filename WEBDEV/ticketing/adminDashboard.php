@@ -48,7 +48,7 @@
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title"><a href="eventView.php?event_id=<?php echo $item['event_id']; ?>"><?php echo $item['title']; ?></a></h5>
-                                        <p class="card-text"><?php echo $item['description'] ?></p>
+                                        <p class="card-text"><?php echo $item['status'] ?></p>
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">Sell Start: <?php echo $item['sell_from_date'] ?></li>
                                             <li class="list-group-item">Sell Until: <?php echo $item['sell_until_date'] ?></li>
