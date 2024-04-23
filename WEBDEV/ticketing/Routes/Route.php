@@ -268,7 +268,7 @@
     }
     // add event
     else if($route === '/WEBDEV/ticketing/addEvent.php') {
-        if(!isset($_SESSION['role']) && $_SESSION['role'] != '2'){
+        if(!isset($_SESSION['role']) || $_SESSION['role'] != '2'){
             header('Location:./');
         }
     }
@@ -280,6 +280,9 @@
         if(isset($_GET['event_id']) && !empty($_GET['event_id'])) {
             $eventController = new EventController();
             $data = $eventController->getEventById(['event_id' => $_GET['event_id']]);
+            if($data['approval'] == 'approved') {
+                header('Location:./organizerDashboard.php');
+            }
             if(!empty($data)) {
                 $ticketController = new TicketController();
                 $data2 = $ticketController->ticketList($data);
