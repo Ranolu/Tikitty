@@ -164,7 +164,7 @@
     }
     //organizer Dashboard
     else if(strpos($routeWithoutParams, '/WEBDEV/ticketing/organizerDashboard.php') === 0) {
-        if(!isset($_SESSION['role']) && $_SESSION['role'] != '2'){
+        if(!isset($_SESSION['role']) || $_SESSION['role'] != '2'){
             header('Location:./');
         }
 
@@ -183,7 +183,7 @@
     }
     //admin dashboard
     else if(strpos($routeWithoutParams, '/WEBDEV/ticketing/adminDashboard.php') === 0) {
-        if(!isset($_SESSION['role']) && $_SESSION['role'] != '1'){
+        if(!isset($_SESSION['role']) || $_SESSION['role'] != '1'){
             header('Location:./');
         }
 
