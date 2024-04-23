@@ -212,6 +212,11 @@
         if(isset($_GET['event_id']) && !empty($_GET['event_id'])) {
             $eventController = new EventController();
             $data = $eventController->getEventById(['event_id' => $_GET['event_id']]);
+            if(isset($_SESSION['role']) && $_SESSION['role'] == '2') {
+                if($data['user_id'] != $_SESSION['user_id']) {
+                    header('Location:./');
+                }
+            }
             if(empty($data)) {
                 header('Location: ./');
             }
@@ -274,13 +279,16 @@
     }
     // edit event
     else if(strpos($routeWithoutParams, '/WEBDEV/ticketing/editEvent.php') === 0) {
-        if(!isset($_SESSION['role']) || $_SESSION['role'] == '3'){
+        if(!isset($_SESSION['role']) || $_SESSION['role'] != '2'){
             header('Location:./');
         }
         if(isset($_GET['event_id']) && !empty($_GET['event_id'])) {
             $eventController = new EventController();
             $data = $eventController->getEventById(['event_id' => $_GET['event_id']]);
             if($data['approval'] == 'approved') {
+                header('Location:./organizerDashboard.php');
+            }
+            if($data['user_id'] != $_SESSION['user_id']) {
                 header('Location:./organizerDashboard.php');
             }
             if(!empty($data)) {
